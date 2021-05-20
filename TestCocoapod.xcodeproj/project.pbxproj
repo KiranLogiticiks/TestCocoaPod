@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F443765D264BE2BF0060CD4D /* TestCocoapod.h in Headers */ = {isa = PBXBuildFile; fileRef = F443765B264BE2BF0060CD4D /* TestCocoapod.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4F4B0B7265630DF008079EB /* AlertViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4B0B6265630DF008079EB /* AlertViewHandler.swift */; };
+		F4F4B0BA2656312A008079EB /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F4B0B92656312A008079EB /* NavigationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F4437658264BE2BF0060CD4D /* TestCocoapod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestCocoapod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F443765B264BE2BF0060CD4D /* TestCocoapod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCocoapod.h; sourceTree = "<group>"; };
 		F443765C264BE2BF0060CD4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4F4B0B6265630DF008079EB /* AlertViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewHandler.swift; sourceTree = "<group>"; };
+		F4F4B0B92656312A008079EB /* NavigationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +50,10 @@
 		F443765A264BE2BF0060CD4D /* TestCocoapod */ = {
 			isa = PBXGroup;
 			children = (
+				F4F4B0B92656312A008079EB /* NavigationHelper.swift */,
 				F443765B264BE2BF0060CD4D /* TestCocoapod.h */,
 				F443765C264BE2BF0060CD4D /* Info.plist */,
+				F4F4B0B6265630DF008079EB /* AlertViewHandler.swift */,
 			);
 			path = TestCocoapod;
 			sourceTree = "<group>";
@@ -94,6 +100,7 @@
 				TargetAttributes = {
 					F4437657264BE2BF0060CD4D = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -130,6 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4F4B0B7265630DF008079EB /* AlertViewHandler.swift in Sources */,
+				F4F4B0BA2656312A008079EB /* NavigationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +270,7 @@
 		F4437661264BE2BF0060CD4D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4GD33CUQT6;
@@ -277,6 +287,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.moblejoseph.TestCocoapod;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,6 +296,7 @@
 		F4437662264BE2BF0060CD4D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4GD33CUQT6;
