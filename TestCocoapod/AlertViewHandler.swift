@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlertViewControllerHandler: NSObject {
+public class AlertViewControllerHandler: NSObject {
     func showAlertWithMessage( _ message : String, title: String = "Alert")  {
         DispatchQueue.main.async {
             if let topViewController = NavigationHelper().getCurrentTopViewController(){
