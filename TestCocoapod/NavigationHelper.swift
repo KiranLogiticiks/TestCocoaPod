@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-class NavigationHelper{    
+class NavigationHelper{
+    //Pode sepc Issuea
     func getCurrentTopViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return getCurrentTopViewController(base: nav.visibleViewController)
