@@ -8,7 +8,7 @@
 import UIKit
 
 public class AlertViewControllerHandler: NSObject {
-    func showAlertWithMessage( _ message : String, title: String = "Alert")  {
+    public func showAlertWithMessage( _ message : String, title: String = "Alert")  {
         DispatchQueue.main.async {
             if let topViewController = NavigationHelper().getCurrentTopViewController(){
                 let alert  =  UIAlertController(title: title, message:message, preferredStyle: UIAlertController.Style.alert)
@@ -20,7 +20,7 @@ public class AlertViewControllerHandler: NSObject {
         }
     }
     
-    func showAlertWithMessage( _ message : String, title: String = "Alert",actionTitle:String = "OK", completion: @escaping () -> ()){
+    public   func showAlertWithMessage( _ message : String, title: String = "Alert",actionTitle:String = "OK", completion: @escaping () -> ()){
         DispatchQueue.main.async {
             if let topViewController = NavigationHelper().getCurrentTopViewController(){
                 let alert  =  UIAlertController(title: title, message:message, preferredStyle: UIAlertController.Style.alert)
@@ -31,9 +31,8 @@ public class AlertViewControllerHandler: NSObject {
                 topViewController.view.isUserInteractionEnabled  =  true
             }
         }
-        
     }
-    func showAlertWithMessage( _ message : String, title: String = "Alert",actionTitle1:String, completion1: @escaping () -> (),actionTitle2:String, completion2: @escaping () -> ()){
+    public func showAlertWithMessage( _ message : String, title: String = "Alert",actionTitle1:String, completion1: @escaping () -> (),actionTitle2:String, completion2: @escaping () -> ()){
         DispatchQueue.main.async {
             if let topViewController = NavigationHelper().getCurrentTopViewController(){
                 let alert  =  UIAlertController(title: title, message:message, preferredStyle: UIAlertController.Style.alert)
@@ -46,10 +45,9 @@ public class AlertViewControllerHandler: NSObject {
                 topViewController.view.isUserInteractionEnabled  =  true
             }
         }
-        
     }
     
-    func showAlertWithMessage( _ message : String, title: String = "Alert",actionTitle1:String, completion1: @escaping () -> (),actionTitle2:String, completion2: @escaping () -> (),actionTitle3:String, completion3: @escaping () -> ()){
+    public  func showAlertWithMessage( _ message : String, title: String = "Alert",actionTitle1:String, completion1: @escaping () -> (),actionTitle2:String, completion2: @escaping () -> (),actionTitle3:String, completion3: @escaping () -> ()){
         if let topViewController = NavigationHelper().getCurrentTopViewController(){
             let alert  =  UIAlertController(title: title, message:message, preferredStyle: UIAlertController.Style.alert)
             let alertAction1 = UIAlertAction(title: actionTitle1, style: UIAlertAction.Style.default, handler:{ (alert: UIAlertAction!) in completion1()})
